@@ -1,0 +1,40 @@
+<configuration plugin="maphandler">
+	<settings name="commands">
+		<!-- Specify what admin level can use the commands here -->
+		<set name="firstcycle-fc">20</set>
+		<set name="secondcycle-sc">20</set>
+		<set name="thirdcycle-tc">20</set>
+	</settings>
+	<settings name="settings">
+		<!-- Do you want to use the mapcycle.txt files located in the q3ut4 folder? (True/False)
+		If you choose False you must specify maps to use.
+		Use 0 to disable maps set -->
+		<set name="usetxt">False</set>
+		<set name="cycle1_maps">ut4_abbey, ut4_riyadh_mod_bots, ut4_algiers</set>
+		<set name="cycle2_maps">ut4_paradise, ut4_towers, ut4_uptown, ut4_casa</set>
+		<set name="cycle3_maps">0</set>
+		<!------------------------------------------------------------------------------>
+		<!-- Use this section if usetxt is set to True-->
+		<!--specify location of mapcycle.txt files, including the trailing slash "/" -->
+		<set name="gamefolder">/home/phoenix/service15/UrbanTerror42/q3ut4/</set>
+		<!--names of the map lists, 0 to disable -->
+		<set name="maplist1">mapcycle.txt</set>
+		<set name="maplist2">mapcycle2.txt</set>
+		<set name="maplist3">mapcycle3.txt</set>
+		<!-- -------------------------------------------------------------------------- -->
+		<!--amount of players that must be on server before map cycle changes -->
+		<set name="player_amount2">6</set>
+		<set name="player_amount3">10</set>
+	</settings>
+	<!-- Set the cvars that will change when a new mapcycle is in effect -->
+	<maplist2_options>
+		<cvar>g_gravity 800</cvar>
+		<cvar>g_gametype 3</cvar>
+		<cvar>g_fraglimit 200</cvar>
+	</maplist2_options>
+	<maplist3_options>
+		<cvar>g_gravity 850</cvar>
+		<cvar>g_friendlyfire 1</cvar>
+	</maplist3_options>
+	
+</configuration>
