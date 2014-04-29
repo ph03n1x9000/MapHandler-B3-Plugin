@@ -4,6 +4,7 @@
 		<set name="firstcycle-fc">20</set>
 		<set name="secondcycle-sc">20</set>
 		<set name="thirdcycle-tc">20</set>
+		<set name="resetcycle-rescyc">20</set>
 	</settings>
 	<settings name="settings">
 		<!-- Do you want to use the mapcycle.txt files located in the q3ut4 folder? (True/False)
@@ -26,7 +27,7 @@
 		<set name="player_amount2">6</set>
 		<set name="player_amount3">10</set>
 	</settings>
-	<!-- Set the cvars that will change when a new mapcycle is in effect -->
+	<!-- Set the cvars that will change when a new mapcycle is in effect. This is only used if usetxt is False.-->
 	<maplist2_options>
 		<cvar>g_gravity 800</cvar>
 		<cvar>g_gametype 3</cvar>
@@ -36,5 +37,10 @@
 		<cvar>g_gravity 850</cvar>
 		<cvar>g_friendlyfire 1</cvar>
 	</maplist3_options>
+	<!--Specify the original cvars below. This will be used to restore cvars when regular cycle is resumed-->
+	<original_options>
+		<cvar>g_gravity 800</cvar>
+		<cvar>g_fraglimit 100</cvar>
+	</original_options>
 	
 </configuration>
