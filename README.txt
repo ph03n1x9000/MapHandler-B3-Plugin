@@ -30,10 +30,11 @@ Designed to work on Urban Terror only. Not tested on other games.
  NOTE: 
  - Activating fisrstcycle by force will not result in a reset.
    The game will remain in first cycle until a reset cycle command is issued.
+   Of course the same goes for other cycles as well.
  
  - Admin cycle can only be activated by admin.
  
- - If the cycle is manually changed by an admin, 
+ - Again...If the cycle is manually changed by an admin, 
    it must be reset for the plugin to automatically change cycle based on player amount
  
 
