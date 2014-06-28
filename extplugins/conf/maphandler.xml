@@ -1,46 +1,27 @@
 <configuration plugin="maphandler">
 	<settings name="commands">
 		<!-- Specify what admin level can use the commands here -->
-		<set name="firstcycle-fc">20</set>
+		<set name="firstcycle-oc">20</set>
 		<set name="secondcycle-sc">20</set>
 		<set name="thirdcycle-tc">20</set>
-		<set name="resetcycle-rescyc">20</set>
+		<set name="admincycle-ac">20</set>
+		<set name="resetcycle-rc">20</set>
 	</settings>
 	<settings name="settings">
-		<!-- Do you want to use the mapcycle.txt files located in the q3ut4 folder? (True/False)
-		If you choose False you must specify maps to use.
-		Use 0 to disable maps set -->
-		<set name="usetxt">False</set>
-		<set name="cycle1_maps">ut4_abbey, ut4_riyadh_mod_bots, ut4_algiers</set>
-		<set name="cycle2_maps">ut4_paradise, ut4_towers, ut4_uptown, ut4_casa</set>
-		<set name="cycle3_maps">0</set>
-		<!------------------------------------------------------------------------------>
-		<!-- Use this section if usetxt is set to True-->
-		<!--specify location of mapcycle.txt files, including the trailing slash "/" -->
-		<set name="gamefolder">/home/phoenix/service15/UrbanTerror42/q3ut4/</set>
-		<!--names of the map lists, 0 to disable -->
-		<set name="maplist1">mapcycle.txt</set>
-		<set name="maplist2">mapcycle2.txt</set>
-		<set name="maplist3">mapcycle3.txt</set>
-		<!-- -------------------------------------------------------------------------- -->
-		<!--amount of players that must be on server before map cycle changes -->
+		<!--Enter the names of the files with the map list-->
+		<set name="mapfile1">mapcycle.txt</set>
+		<set name="mapfile2">mapcycle2.txt</set>
+		<set name="mapfile3">mapcycle3.txt</set>
+		<!--The next cycle can only be called by an admin, the plugin will not use it automatically -->
+		<set name="admin_mapfile">admin_cycle.txt</set>
+        	<!-- amount of players that must be on server before map cycle changes -->
 		<set name="player_amount2">6</set>
 		<set name="player_amount3">10</set>
 	</settings>
-	<!-- Set the cvars that will change when a new mapcycle is in effect. This is only used if usetxt is False.-->
-	<maplist2_options>
-		<cvar>g_gravity 800</cvar>
-		<cvar>g_gametype 3</cvar>
-		<cvar>g_fraglimit 200</cvar>
-	</maplist2_options>
-	<maplist3_options>
-		<cvar>g_gravity 850</cvar>
-		<cvar>g_friendlyfire 1</cvar>
-	</maplist3_options>
-	<!--Specify the original cvars below. This will be used to restore cvars when regular cycle is resumed-->
-	<original_options>
-		<cvar>g_gravity 800</cvar>
-		<cvar>g_fraglimit 100</cvar>
-	</original_options>
-	
+	<settings name="options">
+		<!-- Set the cvars that will change when a new mapcycle is in effect.-->
+		<set name="cycle2_options">g_gravity 300, g_fraglimit 250</set>
+		<set name="cycle3_options">g_gravity 900, g_fraglimit 300</set>
+		<set name="original_options">g_gravity 800, g_fraglimit 150</set>
+	</settings>
 </configuration>
