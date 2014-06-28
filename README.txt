@@ -11,6 +11,7 @@ Designed to work on Urban Terror only. Not tested on other games.
  
  Copy maphandler.py to b3/extplugins/
  Copy maphandler.xml to b3/extplugins/conf
+ Put your mapcycle lists in your server's q3ut4 folder (same folder with your server.cfg file)
  Edit maphandler.xml as wanted. Do NOT change setting names as this will break the plugin.
  Add the following line to b3.xml plugin section:
  
