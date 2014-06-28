@@ -3,7 +3,8 @@ MapHandler-B3-Plugin
 
  ---------------- Description: ----------------
 
-B3 plugin to assist with map handling. It can change cycles based on amount of players and also change cvars when cycle is changed.
+B3 plugin to assist with map handling. 
+It can change cycles based on amount of players and also change cvars when cycle is changed.
 
 Designed to work on Urban Terror only. Not tested on other games.
 
@@ -20,12 +21,19 @@ Designed to work on Urban Terror only. Not tested on other games.
  
  --------------- Usage: -----------------------
  
- !firstcycle - ll force the first cycle to activate unless it is already active
- !secondcycle - ll force the second cycle to activate unless it is already active
+ !firstcycle - will force the first cycle to activate unless it is already active
+ !secondcycle - will force the second cycle to activate unless it is already active
  !thirdcycle - ll force the third cycle to activate unless it is already active
  !admincycle - will activate the admin cycle unless it is already active
  !resetcycle - will reset all values and return to automatic cycling based on player amount
  
- NOTE: Activating fisrstcycle by force will not result in a reset, the game will remain in first cycle until a reset cycle command is issued.
+ NOTE: 
+ - Activating fisrstcycle by force will not result in a reset.
+   The game will remain in first cycle until a reset cycle command is issued.
+ 
+ - Admin cycle can only be activated by admin.
+ 
+ - If the cycle is manually changed by an admin, 
+   it must be reset for the plugin to automatically change cycle based on player amount
  
 
