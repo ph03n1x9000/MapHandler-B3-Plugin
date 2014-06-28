@@ -14,7 +14,7 @@ Designed to work on Urban Terror only. Not tested on other games.
  Edit maphandler.xml as wanted. Do NOT change setting names as this will break the plugin.
  Add the following line to b3.xml plugin section:
  
- <plugin name="maphandler" config="@b3/extplugins/conf/maphandler.xml/>
+ <plugin name="maphandler" config="@b3/extplugins/conf/maphandler.xml"/>
  
  
  --------------- Usage: -----------------------
