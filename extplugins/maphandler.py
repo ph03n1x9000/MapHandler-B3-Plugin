@@ -21,6 +21,7 @@ __author__ = 'ph03n1x'
 import b3, time, threading, re
 import b3.events
 import b3.plugin
+import b3.cron
 import shutil
 import os
 
@@ -131,17 +132,19 @@ class MaphandlerPlugin(b3.plugin.Plugin):
 
     def _checkPhaseTwo(self):
         self.debug('Phase two checking: Started')
-        q1 = range(int(self._player_amount2))
-        q2 = range(int(self._player_amount2), int(self._player_amount3))
-        if self._clients in q1 and self._currentCycle != 1:
+        self._clients = len(self.console.clients.getList())
+        q1 = self._player_amount2
+        q2 = self._player_amount3
+        if self._clients < q2 and self._currentCycle != 1:
             self._a1 = 0
             self._a2 = 1
             self.cycleOne()
-        elif self._clients in q2 and self._currentCycle != 2:
-            self._a1 = 0
-            self._a2 = 1
-            self.cycleTwo()
-        elif self._clients >= self._player_amount3 and self._currentCycle != 3:
+        elif self._clients >= q1 and self._clients < q2:
+            if self._currentCycle != 2:
+                self._a1 = 0
+                self._a2 = 1
+                self.cycleTwo()
+        elif self._clients >= q2 and self._currentCycle != 3:
             self._a1 = 0
             self._a2 = 1
             self.cycleThree()
@@ -307,3 +310,17 @@ class MaphandlerPlugin(b3.plugin.Plugin):
             self._resetPhase()
             client.message('^2Mapcycle has been reset')
             
+            
+
+
+
+
+            
+
+
+
+
+    
+        
+
+
