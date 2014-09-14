@@ -46,7 +46,6 @@ class MaphandlerPlugin(b3.plugin.Plugin):
 
 
     def onStartup(self):
-        self.registerEvent(b3.events.EVT_GAME_ROUND_START)
         self.registerEvent(b3.events.EVT_CLIENT_AUTH)
         self.registerEvent(b3.events.EVT_CLIENT_DISCONNECT)
         self.registerEvent(b3.events.EVT_GAME_WARMUP)
@@ -95,7 +94,6 @@ class MaphandlerPlugin(b3.plugin.Plugin):
        
 
     def _loadSettings(self):
-        self._gamefolder = self.config.get('settings', 'filefolder')
         self._mapfile1 = self.config.get('settings', 'mapfile1')
         self._mapfile2 = self.config.get('settings', 'mapfile2')
         self._mapfile3 = self.config.get('settings', 'mapfile3')
